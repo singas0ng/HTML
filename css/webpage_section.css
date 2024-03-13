@@ -4,6 +4,49 @@ section article {
     margin-bottom: 10px;
 
 }
-section article.article-1 div.flex-3 {
+
+section article.article-1 div.flex-3.menubar {
     display: flex;
+
+    /* flex 보안하기 위해 grid 씀 */
+    gap:10px;
+
+}
+
+section article.article-1 div.flex-3.menubar > div {
+    border: 1px solid black;
+}
+
+section article.article-1 div.flex-3.inputform {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+section article.article-1 div.flex-3.inputform > div {
+
+    border: 1px solid black;
+
+    /* flex-3 자식의 최대 크기가 됨 */
+    /* 이렇게 하면 div가 몇개든 알아서 공간 똑같이 나눔 */
+    width: 48%;
+
+}
+
+
+section article.article-2 div.grid-3 { 
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+
+    /* gap 양옆, 위아래 따로 간격 줄거면 이런식으로 */
+    row-gap: 40px;
+    column-gap: 10px;
+
+}
+
+section article.article-2 div.grid-3 > div { 
+    border: 1px solid black;
 }
