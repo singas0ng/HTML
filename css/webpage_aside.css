@@ -82,3 +82,16 @@ input[type=radio]:nth-of-type(2):checked
 display: block;    
 
 }
+
+aside ul > li { 
+    border: 1px solid black;
+
+}
+
+
+/* 중복선 제거 */
+aside ul > li:not(:last-child){ 
+    /* last-child 빼고 선 지움*/
+    border-bottom: 0;
+
+}
