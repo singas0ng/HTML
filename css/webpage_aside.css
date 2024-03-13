@@ -1,24 +1,30 @@
-
-aside ul > li > a > div {
-    /* float 설정 */
-    float: left;
-}
-
-
-aside ul > li > a > div:last-child {
-    /* float 설정 */
-    width: 120px;
-    float: left;
-    
-}
-
 aside ul > li {
     /* float 해제 */
     clear: both;
     
     /* float 부모에 걸기 */
     overflow: hidden;
+
+    padding: 10px;
+
 }
+
+aside ul > li > a > div:first-child{
+    /* float 설정  */
+    width: 45px; float: left;
+}
+
+aside ul > li > a > div:last-child {
+    /* float 설정 */
+    width: 120px;
+    float: left;
+    
+    margin: 10px;
+    
+}
+
+
+/* radio 보였다 안보였다 */
 
 aside input[type=radio] {
     display:none;
