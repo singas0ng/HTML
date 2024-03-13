@@ -35,7 +35,8 @@ header div.logo {
     position: absolute; top: 20px; left: 30px;
 }
 
-/* li-a 링크에 padding, background, border 추가하기 */
+/* li-a 링크에 padding, background, border, background 추가하기 */
+
 
 header a {
     display: inline-block;

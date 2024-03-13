@@ -19,7 +19,7 @@
 
     background-color: azure;
     
-    /* float 배치 해제 */
+    /* float 배치 해제 - 동위에게 해제 */
     clear: both;
 
 }
@@ -37,12 +37,25 @@
     width: 960px;
     margin: 0 auto;
 
+    /* 부모에게 높이 계산할수 있게 하기 위해 overflow 넣어야함*/
+    overflow: hidden;
+
+
+    /* 이렇게 하니까 background 가 다 안채워지고 빈 공간 생김 */
+    /* margin: 10px 0; */
+
+/* background 다 칠해지게 설정 */
+    padding: 10px 0;
+    
 }
 
 .wrap-main > section {
 /* float 왼쪽 배치 */
     float: left;
     width: 750px;
+
+    margin-right: 10px;
+    /* 이거까지 추가해여 960 딱 떨어지게 나옴 */
 }
 
 .wrap-main > aside {
