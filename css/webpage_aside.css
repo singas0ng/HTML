@@ -1,19 +1,18 @@
 
-
-ul > li > a > div:first-child {
+aside ul > li > a > div {
     /* float 설정 */
-    width: 45px;
     float: left;
 }
 
-ul > li > a > div:last-child {
+
+aside ul > li > a > div:last-child {
     /* float 설정 */
     width: 120px;
     float: left;
     
 }
 
-ul > li {
+aside ul > li {
     /* float 해제 */
     clear: both;
     
