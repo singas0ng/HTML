@@ -1,0 +1,123 @@
+/* layout 을 가장 먼저 잡음 -  section, aside 가 옆으로 나타나야함*/
+
+
+body {
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
+div.wrap {
+    
+    border: 1px solid black;
+}
+
+header {
+    /* layout - 01 (전체화면에서 가운데 정렬) */
+    /* 가운데 정렬 = width, margin */
+    width: 960px;
+    margin: 0 auto;
+    /* 아래 위는 margin 없고 양쪽 끝으로만 auto 로 먹게 하면 화면 늘렸을 때 내용이 가운데에 위치함 */
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.wrap > .wrap-main {
+    margin-bottom: 10px;
+    /* 밑으로 간격 만들기 */
+    
+}
+
+.wrap > .wrap-nav {
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.wrap > .wrap-nav > nav {
+    
+    width: 960px;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.wrap-content {
+    width: 960px;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+  
+}
+
+section {
+    /* layout 03 */
+        /* display 가 block 이지만 수평나누기
+        width
+        display: inline -block; */
+    width: 80%;
+    display: inline-block;
+    background-color: azure;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+article {
+    border: 1px solid black;
+    box-sizing: border-box;
+
+}
+
+aside {
+
+        /* display 가 block 이지만 수평나누기
+        width
+        display: inline -block; */
+    display: inline-block;
+    width: 15%;
+    background-color: bisque;
+    border: 1px solid black;
+    box-sizing: border-box;
+   
+}
+
+footer {
+
+        border: 1px solid black;
+        width: 960px;
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
+        /* content box 가 default 값 */
+}
+
+nav > ul > li{ 
+    display: inline-block;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.wrap-nav > nav > ul > li,
+footer > nav > ul > li {
+    display: inline-block;
+    padding: 30px 25px 15px 10px;
+    /* margin: 20px 30px; */
+    /* 앞이 위아래, 뒤에가 오왼 */
+    margin: 5px 20px 25px 30px;
+    /* 위 오 아래 왼 */
+    /* 이거 만듦으로써 바로 위에 있는거 overlap 함 */
+}
+
+
+/* font size */
+.fs-1 {
+    /* font-size 를 이렇게 줄여서 씀 */
+    font-size: 24px;
+}
+.fs-2 {
+    font-size: 18px;
+}
+.fs-3 {
+    font-size: 16px;
+}
+.fs-4 {
+    font-size: 14px;
+}
+

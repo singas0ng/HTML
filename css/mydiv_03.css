@@ -1,0 +1,142 @@
+/* layout 을 가장 먼저 잡음 -  section, aside 가 옆으로 나타나야함*/
+
+
+body {
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
+div.wrap {
+    
+    border: 1px solid black;
+
+
+}
+
+header {
+    /* layout - 01 (전체화면에서 가운데 정렬) */
+    /* 가운데 정렬 = width, margin */
+    width: 960px;
+    margin: 0 auto;
+    /* 아래 위는 margin 없고 양쪽 끝으로만 auto 로 먹게 하면 화면 늘렸을 때 내용이 가운데에 위치함 */
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.wrap > .wrap-main {
+    margin-bottom: 10px;
+}
+
+.wrap > .wrap-nav {
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.wrap > .wrap-nav > nav {
+    
+    width: 960px;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.wrap-content {
+    /* relative 지정하는 이유: 나의 자식들의 기준점이 된다. (0, 0)으로부터 시작 */
+    /* => section, aside 의 기준점이 됨 */
+    /* 나의 자식들은 어떻게 위치를 잡냐 =>  absolute 로 자유분방한 포지션 잡을 수 있음 */
+    position: relative;
+    /* position: relative; 은 특정 위치를 맞춰줌 */
+    height: 500px;
+    /* 부모 position 에 높이 지정해주기 */
+    right: 10px;
+    top: 15px;
+    /* 원래 있던 위치에서 right, top으로 부터 얼마 아래쪽으로 떨어짐*/
+    
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  
+}
+
+section {
+    /* layout 04 */
+        /* display 가 block 이지만 수평으로 배치
+        position
+     */
+    position: relative;
+    /* 얘 안의 자식들에게 기준이 됨 */
+    top: 0;
+    /* 0은 단위 적지 X */
+    left: 0; 
+    /* 부모로부터 (0,0) 위치에 오게 하고 싶다 */
+    width: 80%;
+    background-color: azure;
+    box-sizing: border-box;
+}
+
+article {
+    border: 1px solid black;
+    box-sizing: border-box;
+    
+}
+
+aside {
+    /* layout - 04 
+    display 가 block 이지만 수평으로 배치
+    position
+    */
+    position: absolute;
+    /* 나의 부모로부터 자유롭게 포지션 잡을거야 */
+    top: 0;
+    /* 부모꺼의 기준으로 top 위치에 지정 */
+    right: 0;
+    /* 오른쪽을 기준으로 0인 위치 */
+    /* left: 81%; */
+    width: 15%;
+    background-color: bisque;
+    border: 1px solid black;
+    box-sizing: border-box;
+   
+}
+
+footer {
+        position: relative;
+        border: 1px solid black;
+        width: 960px;
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
+        /* content box 가 default 값 */
+}
+
+nav > ul > li{ 
+    display: inline-block;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.wrap-nav > nav > ul > li,
+footer > nav > ul > li {
+    display: inline-block;
+    padding: 30px 25px 15px 10px;
+    /* margin: 20px 30px; */
+    /* 앞이 위아래, 뒤에가 오왼 */
+    margin: 5px 20px 25px 30px;
+    /* 위 오 아래 왼 */
+}
+
+
+/* font size */
+.fs-1 {
+    /* font-size 를 이렇게 줄여서 씀 */
+    font-size: 24px;
+}
+.fs-2 {
+    font-size: 18px;
+}
+.fs-3 {
+    font-size: 16px;
+}
+.fs-4 {
+    font-size: 14px;
+}
+

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+</head>
+<body>
+    <hi id="page1">하이퍼링크 태그</hi>
+    <div><a href="http://naver.com" target="_blank">링크 - 외부</a></div>
+    <div><a href="/views/new_page.html">링크 - 내부서버파일</a></div>
+    <a href="#page3">링크 - 페이지 내부</a>
+
+    <span>영역태그 중 inline 영역의 대표주자</span>
+    <span>영역태그 중 inline 영역의 대표주자</span>
+    <span>영역태그 중 inline 영역의 대표주자</span>
+    <span>영역태그 중 inline 영역의 대표주자</span>
+    <div>영역태그 중 block 영역의 대표주자</div>
+    <div>영역태그 중 block 영역의 대표주자</div>
+    <div>영역태그 중 block 영역의 대표주자</div>
+
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/O_B-0iPCbaU?si=jcTleYXI0Fgnswo1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+
+    <h1>표태그도 좀 중요</h1>
+<table border="1" id="page1">
+     <thead>        
+         <tr>
+            <th>내용 1</th>
+            <td>내용 2</td>
+            <td>내용 3</td>
+            <td>내용 4</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>내용 5</th>
+            <td>내용 6</td>
+            <td>내용 7</td>
+            <td>내용 8</td>
+
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>내용 9</th>
+            <td>내용 10</td>
+            <td>내용 11</td>
+            <td>내용 12</td>
+
+        </tr>
+    </tfoot>
+</table>
+
+    <br>
+    <br>
+
+
+
+
+
+
+<figure id="page3">
+    <figcaption>표2 - 제목 1</figcaption>
+    <table border="1">
+        <caption>표1 - caption 표시</caption>
+    
+        <tr>
+            <td>내용 1</td>
+            <td>내용 2</td>
+            <td rowspan="2">내용 3</td>
+            <td>내용 4</td>
+        </tr>
+    
+
+        <tr>
+            <td>내용 5</td>
+            <td>내용 6</td>
+      
+            <td>내용 8</td>
+
+        </tr>
+
+        <tr>
+            <td>내용 9</td>
+            <td>내용 10</td>
+            <td>내용 11</td>
+            <td>내용 12</td>
+
+        </tr>
+    </table>
+    <figcaption>표2 - 제목 1</figcaption>
+</figure>
+    <br>
+    <br>
+
+
+    <table border="1">
+        <tr>
+            <td colspan="2">내용 1</td>
+         
+            <td>내용 3</td>
+            <td>내용 4</td>
+        </tr>
+
+        <tr>
+            <td>내용 5</td>
+            <td>내용 6</td>
+            <td>내용 7</td>
+            <td>내용 8</td>
+
+        </tr>
+
+        <tr>
+            <td>내용 9</td>
+            <td>내용 10</td>
+            <td>내용 11</td>
+            <td>내용 12</td>
+
+        </tr>
+
+
+    </table>
+
+
+<br>
+<br>
+
+
+
+    <h1>목록태그는 나열식 - 메뉴 등 쓰임이 많음</h1>
+    <ul>
+        <li>메뉴1</li>
+        <li>
+           <div> 메뉴2 Submenu</div>
+            <!--liv 자식의 div의 inner 문자  -->
+           <ul>
+                <li>메뉴a</li>
+                <li>메뉴b</li>
+                <li>메뉴c</li>
+           </ul>
+
+           <dl>
+           <dt>메뉴 DT</dt>
+                <dd>메뉴 DD</dd>
+                <dd>메뉴 DD</dd>
+                <dd>메뉴 DD</dd>
+
+            </dl>
+
+
+        </li>
+    </ul>
+    <!-- li * 숫자 치면 숫자 개수만큼 생성 -->
+
+
+    <ol type ="a" start="5">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+    </ol>
+
+    <dl>
+        <dt>메뉴 DT</dt>
+        <dd>메뉴 DD</dd>
+        <dd>메뉴 DD</dd>
+        <dd>메뉴 DD</dd>
+    </dl>
+
+
+    <p><strong><small><em>글꼴<mark>태그</mark> 테스트</em></small> </strong></p>
+    <h1>제목</h1>
+    <h2>제목</h2>
+    <h3>제목</h3>
+    <h4>제목</h4>
+    <h5>제목</h5>
+    <h6>제목</h6>
+    <h7>제목</h7>
+<hr id="page4">
+
+    <p> 첫 코드입니다. 첫 코드입니다.첫 코드입니다.첫 코드입니다.첫 코드입니다.
+    첫 코드입니다.첫 코드입니다.첫 코드입니다.첫 코드입니다.</p>
+
+
+    <!-- ctrl + / 으로 주석처리하기 -->
+    안녕하세요. &nbsp; &nbsp; &nbsp; 반갑습니다.
+    html 처음입니다. <br>
+    <!-- br을 문장 뒤에 쓰면 다음 줄 blanck 아님 -->
+    <br>
+    
+    <p>첫 코드입니다. </p>
+    <br>
+    live server start = alt + L 누르고 뗀 다음에 O 누름
+</body>
+</html>
+
+
+<!-- alt + shift + 아래방향키 => 복사 -->

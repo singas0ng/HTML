@@ -1,0 +1,110 @@
+/* layout 을 가장 먼저 잡음 -  section, aside 가 옆으로 나타나야함*/
+
+
+body {
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
+div.wrap {
+ 
+    border: 1px solid black;
+
+    /* 부모 크기를 지정해버리면 자식들이 그대로 따라가야해서 크기는 자식들에게 지정함 */
+
+    /* 아래 위는 margin 없고 양쪽 끝으로만 auto 로 먹게 하면 화면 
+    늘렸을 때 내용이 가운데에 위치함 */
+    /* 얘가 밑에 다 커버하고 있어서 밑에 얘들한테 굳이 이거 안써도
+    알아서 가운데 정렬 되긴 함 */
+}
+
+header {
+    /* layout - 01 (전체화면에서 가운데 정렬) */
+    /* 가운데 정렬 = width, margin */
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.wrap > .wrap-nav {
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.wrap > .wrap-nav > nav {
+    
+    width: 960px;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.wrap-content {
+    width: 960px;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-sizing: border-box;  
+    /* overflow: hidden; */
+}
+
+section {
+    /* layout 02 */
+    /* display block 을 왼쪽 정렬(왼쪽 일부분만 사용할 때) = float 랑 width */
+    float: left;
+    width: 80%;
+    /* 왼쪽에 붙어서 80% 위치 */
+    background-color: blueviolet;
+    border: 1px solid black;
+    box-sizing: border-box;
+
+    /*  display가 block 이지만 일부영역만 사용하고 다시 block 수직정렬 하고 싶을 때 clear 씀 */
+}
+
+article {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+aside {
+    /* 오른쪽 정렬  = float 랑 width*/
+    /*  */
+    float: right;
+    width: 20%;
+    /* 오른쪽에 붙어서 20% 위치 */
+    background-color: bisque;
+    border: 1px solid black;
+    box-sizing: border-box;
+   
+}
+
+
+footer {
+    clear: both;
+    /* float 나오고 나서 그 뒤에 혼자 단독으로 수직정렬 하고 싶으면 clear 씀 */
+        /* content 내용이 없으면 밀려 올라감 */
+        border: 1px solid black;
+        width: 960px;
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
+        /* content box 가 default 값 */
+}
+
+
+
+
+/* font size */
+.fs-1 {
+    /* font-size 를 이렇게 줄여서 씀 */
+    font-size: 24px;
+}
+.fs-2 {
+    font-size: 18px;
+}
+.fs-3 {
+    font-size: 16px;
+}
+.fs-4 {
+    font-size: 14px;
+}
+

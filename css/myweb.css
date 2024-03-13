@@ -1,0 +1,225 @@
+/* 작업 순서 */
+/* font 정하기 - family, size */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    /* 1em(비율로 나타남) = 16px */
+    line-height: 1.2em;
+}
+
+.noto-serif{
+    font-family: "Noto Serif KR", serif;
+    /* 900이 max */
+    font-style: normal;
+
+}
+
+ h1{
+    font-weight: 900;
+    font-size: 1.28em;
+    line-height: 1.3em;
+} 
+
+h3{
+    font-weight: 900;
+    font-size: 1em;
+    line-height: 1.1em;
+
+} 
+ 
+
+/* 1. 최적 해상도 맞추기 - 960px*/
+/*  */
+
+.wrap-header {
+    background-color: antiquewhite;
+
+    /* 자식 elements 들의 높이를 정확하게 계산해줌(absolute는 제외) */
+    /* content 내용만 가지고 높이 지정해서 padding 까지는 측정하는데 margin은 보통 제외됨 */
+    /* overflow: hidden; */
+}
+
+header {
+    /* 1. 중앙 정렬 */
+    width: 960px;
+    margin: 0 auto;
+
+    /* margin 주기 */
+    /* margin-bottom: 10px; */
+
+    padding-bottom: 10px;
+
+    /* 나를 기준으로 자유로운 배치 - 자식이 absolute 일 때 필요*/
+    position: relative;
+    /* 이거 안쓰면 밑에 nav.tnb가 body가 기준점이 됨(화면 전체) */
+
+    height: 160px;
+    /* header 높이 지정 안하면 nav.logo 가 이상한 곳에 나옴 */
+
+}
+
+/* 어디를 기준으로 잡고 배치할거냐 */
+header nav.tnb {
+
+    /* position 에서부터 자유로운 배치 시작 */
+    position: absolute;
+    right: 0;
+}
+
+header nav.bnb {
+    /* position 에서부터 자유로운 배치 시작 */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+header div.logo {
+/* header에 기준점이 있을거야~ 가독성도 좋고~ */
+
+    /* position 에서부터 자유로운 배치 시작 */
+    position: absolute;
+    left: 50px;
+    top: 50px;
+
+}
+
+.wrap-main {
+    /* 1. 중앙 정렬 */
+    width: 960px;
+    margin: 0 auto;
+    /* 3. 테두리 선 긋기 - 크기 감안 해줘야함 */
+
+
+}
+
+section {
+    /* 2. float 배치 */
+    float: left;
+    width: 750px;
+
+    margin-right: 10px;
+
+}
+
+aside {
+    /* 2. float 배치 */
+    float: left;
+    width: 200px;
+
+    /* 3. 테두리 선 긋기 - 크기 감안 해줘야함 */
+    border: 1px solid black;
+    box-sizing: border-box;
+
+}
+
+
+.wrap-footer {
+    /* 2. float 배치 */
+    clear: both;
+    background-color: pink;
+    
+    /* position: relative;
+    top: -10px; */
+    /* article 올려서 붙임 */
+   /* article margin-bottom 만큼 이동해서 배치 */
+}
+
+footer {
+    width: 960px;
+    margin: 0 auto;
+    /* 1. 중앙 정렬 */
+    padding: 10px 0;
+    /* 위,아래 10이고 왼,오는 0 */
+}
+
+article {
+    /* 3. 테두리 선 긋기 - 크기 감안 해줘야함 */
+    border: 1px solid black;
+    box-sizing: border-box;
+
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+article:last-child {
+    /* 더 디테일한 선택자가 우선권이 더 높아서 article 보다 우선순위 높음 */
+    margin-bottom: 0;
+
+    /* 밑에 달라붙음 */
+}
+
+ul {
+    overflow: hidden;
+}
+
+ul > li {
+    /* display: inline-block; */
+    /*  inline-block 으로 바꾸면 space bar 로 인한 띄어쓰기로 인해 못씀 */
+    
+    float: left;
+    /* padding: 5px; */
+    /* border: 1px solid black; */
+}
+
+nav > ul > li > a {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+nav > ul > li:first-child > a{
+    border-left: 1px solid black;
+    
+}
+
+nav.tnb > ul > li:first-child > a {
+    /* li에게만 쓰면 모든 li 의 자식이 a라 모든 li 에게 적용됨 -  */
+    border-left: 1px solid black;
+    border-radius: 15px 0 0 15px;
+}
+
+nav.tnb > ul > li:last-child > a {
+    border-radius: 0 15px 15px 0;
+}
+
+nav.bnb > ul > li:first-child > a {
+    border-left: 1px solid black;
+    border-radius: 10px 0 0 10px;
+}
+
+nav.bnb > ul > li:last-child > a{
+    border-radius: 0 10px 10px 0;
+}
+
+nav.bnb, .logo {
+    clear: both;
+}
+
+a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+/* a:link {
+    color: aqua;
+}
+
+a:visited {
+    color: yellow;
+}
+
+a:active {
+    color: red;
+} */
+
+a:hover {
+    color: white;
+    /* 마우스 바뀌면  */
+    background-color: black;
+
+}
+
+

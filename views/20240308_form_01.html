@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그</title>
+    <style>
+        @import url(../css/my.css);
+    span, label, #n5v, .nClass, form > div > input {
+       /* 똑같은 스타일 입히고 싶을때 , 찍어서 나열하기
+       #아이디명, 클래스명도 다 가능 */
+       
+        color: violet !important;
+        /* !important 가 제일 최상위 */
+    }
+    </style>
+    <!-- 
+        <link href="../css/my.css" rel="stylesheet" type="text/css"> 
+    -->
+    <!-- css 파일을 link로 끌어다가 씀 -->
+    <!-- rel = 관계가 어떻게 되냐~ ... 이거 생략 불가-->
+    <!-- type은 생략 가능 -->
+</head>
+
+<body>
+    <a href="#n5v" id="a1" class="aclass1">내부링크 테스트</a>
+    <h1 class="tc-pink bg-blue">input type 종류별로 나타내기</h1>
+    <span style="color: aqua"></span>
+    <form method="get" action="#">
+        <div>
+            <label for="n1text">text - 사용자 입력값이 value</label>
+            <input type="text" name="n1" id="n1text" class="input1 text1">
+            <!-- class="input1 text1" => 두개의 class에 속한다 -->
+        </div>
+        <div>
+            <span>password - 사용자 입력값이 value</span>
+            <input type="password" name="n2" class="input1">
+        </div>
+        <div>
+            <span>hidden = 폼 제출 시 사용자가 변경해서는 안 되는 데이터를 함께 보낼 때 사용</span>
+            <input type="hidden" name="n3" value="value 필수">
+        </div>
+        <div>
+            <span>button - 데이터 전송 용도가 아니라서 안에 checkbox 를 써야 데이터 넘어감</span>
+            <input type="button" value="버튼1">
+            <!-- name 이 의미가 없음 -->
+        </div>
+        <div>
+            <span>checkbox -  name 의 속성값으로 그룹핑 됨 + 반드시 value 값 필요</span>
+            <label for="n5v">배구</label><input type="checkbox" name="n5" value="v" id="n5v">
+            <label>야구</label><input type="checkbox" name="n5" value="b"checked="checked" id="n5b">
+            <label>축구</label><input type="checkbox" name="n5" value="s" id="n5s">
+            <!-- 반드시 value 있어야 데이터 넘어감 -->
+            <!-- value 는 달라야 데이터에 혼선이 없음 -->
+            <!-- String[] n5Arr = request.getParameterValues("n5"); -->
+            <br>
+
+            <span>Java</span><input type="checkbox" name="n10" value="j">
+            <span>HTML</span><input type="checkbox" name="n10" value="h">
+            <span>JDBC</span><input type="checkbox" name="n10" value="d">
+            <!-- 그룹핑 개념이 있음 => 하나로 처리하고 싶은것들 이름 같게 함 -->
+        </div>
+        <div>
+            <span>file</span>
+            <input type="file" name="n6">
+        </div>
+        <div>
+            <span>radio - name 의 속성값으로 그룹핑 됨 + value 필수</span><br>
+            <span>Java</span><input type="radio" name="n7" value="j" checked="checked">
+            <span>Oracle</span><input type="radio" name="n7" value="o" checked="checked">
+            <span>HTML</span><input type="radio" name="n11" value="h">
+            <span>CSS</span><input type="radio" name="n11" value="c">
+            <span>JS</span><input type="radio" name="n11" value="s">
+            <!-- 같은 이름끼리는 하나씩만 선택할 수 있고 다른 이름끼리는 같이 선택 가능-->
+        </div>
+        <div>
+            <span>submit</span>
+            <input type="submit">
+            <!-- 데이터 전달 안해서 name 필요 없음 -->
+        </div> 
+        <div>
+            <span>reset</span>
+            <input type="reset">
+            <!-- 데이터 전달 안해서 name 필요 없음 -->
+
+        </div>
+
+
+
+
+
+
+    </form>
+
+
+
+
+
+
+    <h1>web31 dept insert</h1>
+    <form method="post" action="http://127.0.0.1:8080/web31/dept/insert" autocomplete="off" target="_self">
+        <!-- eclipse 는 tomcat, html 은 live 서버가 돌아가고 있어서 다른 서버에 따로 돌아가면 풀네임 다 적어주기 -->
+        <!-- 안에 무엇을 적어서 묶고 데이터를 action 위치로 get 전달하고 싶은지 적어야함-->
+        
+        <fieldset>
+            <legend>부서 추가</legend>
+                <div><span>deptno</span> <input type="text" name="deptno" placeholder="2자리 입력해주세요"></div>        
+                <div><span>danme</span><input type="text" name="dname"></div>        
+                <div><span>loc</span><input type="text" name="loc" value="seoul"></div>        
+                <!-- name에 적히는 이름들 특히 중요! 잘 매칭해야함 -->
+                <div>
+                <input type="submit" value="submit">
+                <!-- submit 버튼 누르는 시점에 입력되어 있는 얘들이 value에 들어가면서 전달 -->
+              
+
+                </div>
+        </fieldset>
+
+    </form>
+
+    <form method="post" action="http://127.0.0.1:8080/web31/dept/delete" autocomplete="off" "_self">
+        <input type="text" name="deptno">        
+        <input type="text" name="dname">        
+        <input type="text" name="loc" value="">        
+        <!-- 사용자한테 입력받은 데이터 넘김 -->
+        <!-- value: 사용자가 입력하면 value(값)가 채워짐 -->
+
+        <input type="reset" value="reset">
+        <!-- 여기는 데이터를 지우는 것이기 떄문에 reset 만 있으면 됨 -->
+    </form>
+    <!-- form은 데이터 전달용 highlight -폼set 5종세트 : method/action/name/value/submit -->
+
+</body>
+</html>
