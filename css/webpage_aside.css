@@ -19,3 +19,60 @@ aside ul > li {
     /* float 부모에 걸기 */
     overflow: hidden;
 }
+
+aside input[type=radio] {
+    display:none;
+}
+
+
+input[type=radio]:nth-of-type(1):checked {
+    /* input 라디오의 첫번째 자식이 체크가 되어 있다면... */
+    
+    height: 50px;
+    width: 50px;
+    /* 이만큼 키우기 */ 
+}
+
+input[type=radio]:nth-of-type(2):checked {
+    /* input 라디오의 두번째 자식이 체크가 되어 있다면... */
+    
+    height: 50px;
+    width: 50px;
+    /* 이만큼 키우기 */ 
+}
+
+input[type=radio]:nth-of-type(1):checked
+~ div:nth-of-type(1)
+{
+/* first 클릭되면 첫번째 tab-item은 보여주고 두번째꺼는 보여주지마*/
+    
+display: block;    
+
+}
+
+input[type=radio]:nth-of-type(1):checked
+~ div:nth-of-type(2)
+{
+/* first 클릭되면 첫번째 tab-item은 보여주고 두번째꺼는 보여주지마*/
+    
+display: none;    
+
+}
+
+input[type=radio]:nth-of-type(2):checked
+~ div:nth-of-type(1)
+{
+
+    
+display: none;    
+
+}
+
+input[type=radio]:nth-of-type(2):checked
+~ div:nth-of-type(2)
+{
+
+    
+display: block;    
+
+}
