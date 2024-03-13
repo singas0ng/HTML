@@ -244,7 +244,7 @@ nav a:hover {
 .tab-item > ul > li >  a > div:last-child {
     float: left;
     width: 120px;
-    /* a의 몸집을 늘리지 않아야(padding 늘리지 X) 마우스 갖다댔을 때 범위가 정확하게 설정됨 */
+    /* a의 몸집을 늘리지 않아야(padding 늘리지 X) 마우스 갖다댔을 때 눌리는 범위가 정확하게 설정됨 */
 
 }
 
