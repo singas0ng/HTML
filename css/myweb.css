@@ -148,16 +148,19 @@ article:last-child {
     /* 밑에 달라붙음 */
 }
 
-ul {
+nav > ul {
     overflow: hidden;
 }
 
-ul > li {
+nav > ul > li {
     /* display: inline-block; */
     /*  inline-block 으로 바꾸면 space bar 로 인한 띄어쓰기로 인해 못씀 */
     
     float: left;
     /* padding: 5px; */
+    /* padding 주면 a 끼리 간격 벌어짐  */
+    /* a를 빵빵하게 키우고 a 자체의 padding 넓히기 */
+
     /* border: 1px solid black; */
 }
 
@@ -196,9 +199,12 @@ nav.bnb, .logo {
     clear: both;
 }
 
-a {
+nav a {
     display: inline-block;
+    /* inline만 하면 padding 의 위, 아래가 background 안먹힘 */
     padding: 10px;
+    /* 마우스를 갖다댔을때 눌리는 범위 넓히기 위해 a 자체에 padding 범위 넓힘 */
+    /* 그리고 이 위에있는 ul의 padding 범위를 없앰 */
     text-decoration: none;
     color: black;
 }
@@ -215,11 +221,42 @@ a:active {
     color: red;
 } */
 
-a:hover {
+nav a:hover {
     color: white;
     /* 마우스 바뀌면  */
     background-color: black;
 
 }
 
+.tab-item > ul > li {
+    clear: both;
+
+}
+
+.tab-item > ul > li > a > div:first-child {
+    /*  */
+    float: left;
+    width: 45px;
+    /*공간은 margin, padding 으로 설정하기 */
+    margin-right: 10px;
+}
+
+.tab-item > ul > li >  a > div:last-child {
+    float: left;
+    width: 120px;
+    /* a의 몸집을 늘리지 않아야(padding 늘리지 X) 마우스 갖다댔을 때 범위가 정확하게 설정됨 */
+
+}
+
+.tab-item > ul > li {
+    padding: 10px;
+    /* 마우스로 안눌리는 범위를 만들어주기 */
+    /* li 한테 너의 빈공간은 남겨놓고 a가 들어가게 되면 a가 클릭되는 영역이 맞춰짐 */
+    overflow: hidden;
+
+}
+
+.tab-item > ul > li {
+    overflow: hidden;
+}
 
