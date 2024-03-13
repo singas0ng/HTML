@@ -1,0 +1,26 @@
+/* @import url(./reset.css);
+또 다른 css 파일 */
+span{
+    color: yellowgreen;
+}
+/*  */
+
+#a1{
+    text-decoration-line: none;
+}
+input{
+background-color: cornsilk;
+}
+
+label{
+ color: lightpink;
+}
+
+.tc-pink{
+    color: pink;
+    font-style: italic;
+}
+.bg-blue{
+    background-color: gray;
+    font-style: italic;
+}
