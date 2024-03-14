@@ -18,7 +18,7 @@
     <!-- 공통적으로 쓰이는 얘들 여기에 써주기 -->
 
     <!-- [5] body Layout 영역 - 화면설계서 -->
-    <link href="/css/webpage_layout.css" rel="stylesheet">
+    <!-- <link href="/css/webpage_layout.css" rel="stylesheet"> -->
 
 
     <!-- head 영역 style -->
@@ -27,15 +27,76 @@
 
     <!-- section 영역 style -->
     <link href="/css/webpage_section.css" rel="stylesheet">
-
-
+    
+    
     <!-- aside 영역 style -->
     <link href="/css/webpage_aside.css" rel="stylesheet">
-
-
+    
+    
     <!-- footer 영역 style -->
     <link href="/css/webpage_footer.css" rel="stylesheet">
+    
+    <style>
+ @import url("/css/webpage_layout.css") screen and (min-width:801px);
+        @import url("/css/webpage_layout_min.css") screen and (max-width:800px);
 
+        @media screen and (min-width:1300px) {
+            body {
+                font-size: 1.1em;
+            }
+
+            h1 {
+                font-weight: 900;
+                font-size: 1.3em;
+                line-height: 1.3em;
+            }
+
+            h3 {
+                font-weight: 900;
+                font-size: 1.1em;
+                line-height: 1.1em;
+            }
+
+            header .tnb a {
+                padding: 10px 15px;
+            }
+
+            header .bnb a {
+                padding: 15px 20px;
+            }
+        }
+        @media screen and (max-width:800px) {
+            body {
+                font-size: .8em;
+            }
+
+            h1 {
+                font-weight: 900;
+                font-size: 1.1em;
+                line-height: 1.3em;
+            }
+
+            h3 {
+                font-weight: 900;
+                font-size: .9em;
+                line-height: 1.1em;
+            }
+
+            header .tnb a {
+                padding: 5px 5px;
+            }
+
+            header .bnb a {
+                padding: 5px 10px;
+            }
+            .wrap-header>header {
+                /* 중앙 배치 */
+                width: 600px; margin: 0 auto;
+            }
+        }
+
+
+    </style>
 
 
 </head>
@@ -109,7 +170,10 @@
                 </article>
                 <article class="article-2">
                     <h1>Grid Layout</h1>
-                    <div class="grid-3">
+                    <div class="grid-3 basis">
+                        <div>
+                            Lorem!
+                        </div>
                         <div>
                             Lorem!
                         </div>
@@ -134,7 +198,9 @@
                             dignissimos neque exercitationem?
                         </div>
                         <div>
-                            Lorem
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam id, aliquid dolores ipsa error
+                            ipsum blanditiis at, totam ex quas, obcaecati ratione repellat laboriosam! Nemo necessitatibus sit
+                            dignissimos neque exercitationem?
                         </div>
                         <div>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam id, aliquid dolores ipsa error
