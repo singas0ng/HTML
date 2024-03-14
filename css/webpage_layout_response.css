@@ -22,6 +22,7 @@
     /* background-color 칠해지는 공간 */
     padding: 10px 0;
 }
+
 .wrap-main > section{
     /* float 왼쪽 배치 */
     width: calc(100% - 210px); float: left;

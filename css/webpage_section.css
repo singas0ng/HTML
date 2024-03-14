@@ -65,4 +65,17 @@ section article.article-2 div.grid-3  > div {
 
 section .flex-card-item {
     display: flex;
+    flex-direction: column;
 }
+
+section .flex-card-item > .flex-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+ section .fullsizeimg {
+ 
+     /* 앞에 고해상도 잡고 이미지 줄이기 */
+     /* 부모 태그 기준으로 100% */
+    width: 100%;
+ }
