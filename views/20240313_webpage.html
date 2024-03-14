@@ -96,6 +96,51 @@
             }
         }
 
+        /* input:disabled {
+            font-size: larger;
+        } */
+
+        .mission_a {
+            position: relative;
+        }
+
+        .mission_a h1 a:hover::after {
+            content: 'HTML5! CSS3! 실습입니다';
+            font: .7em Helveta sans-serif;
+            color : blue;
+
+            position: absolute;
+            /*  고정/특정 위치 놓고 싶을 때*/
+            /* absolute 줬으니 상위 얘한테 relative 주기 */
+            top: 0px;
+            left: 0px;
+            margin-left: 180px;
+        }
+        
+        article > form > div {
+            text-align: center;
+            /* 안에 들어있는 content 를 가운데 정렬 */
+        }
+
+        article .c-ellipsis {
+            border: 1px solid black;
+            width: 100px;
+            
+            /* 세트로 기억하기 */
+            text-overflow: clip;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        article .c-clip {
+            border: 1px solid black;
+            width: 100px;
+
+            /* 세트로 기억하기 */
+            text-overflow: clip;
+            white-space: nowrap;
+            overflow: hidden;
+        }
 
     </style>
 
@@ -131,6 +176,64 @@
         </div>
         <div class="wrap-main">
             <section>
+                <article>
+                    <div class="c-ellipsis">
+                        asfaslfjsjfkj;skjfkskakflalsdlkf
+                    </div>
+                    <div class="c-clip">
+                        asfaslfjsjfkj;skjfkskakflalsdlkf
+                    </div>
+                    <div class="mission_a">
+                        <h1><a href="#">웹표준 2.0</a> 테스트</h1>
+                    </div>
+                </article>
+                <article>
+                    <form method="get" action="#">
+                        <div>
+                            <input type="color" name="color">
+                        </div>
+                        <div>
+                            <input type="date" name="date">
+                        </div>
+                        <div>
+                            <select name="select" >
+                                <!-- drop down 나옴 -->
+                                <optgroup label="과일">
+                                    <option value="f01">banana</option>
+                                    <option value="f02" selected>신선한딸기</option>
+                                    <option value="f03">walnut</option>
+                                    <!-- 간단하게 전송하려고 value 붙임 - 데이터 베이스 저장 데이터 짧아야 좋아서 -->
+                                    <!-- 몇번은 몇번 과일인지 정하고 데이터 간단히 보냄-->
+                                    <!-- radio button이랑 비슷 - name 은 같은데 value 는 다름 -->
+                                </optgroup>
+                                <optgroup label="구황작물">
+                                    <option value="f01">banana</option>
+                                    <option value="f02">신선한딸기</option>
+                                    <option value="f03">walnut</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div>
+                            <datalist id="datalist"> 
+                                <option value="f01" label="aaa">banana</option>
+                                <option value="f02">신선한딸기</option>
+                                <option value="f03">walnut</option>
+                            </datalist>
+                            <input type="text" list="datalist" name="n3">
+                            <!-- type 에 search도 됨 -->
+                        </div>
+                        <div>
+                            <!-- <input type="submit" value="전달"> -->
+                            <button type="button">버튼1</button>
+                            <button>아무것도 안적으면 기본값 submit</button>
+                        </div>
+                        <div>
+                            id: <input type="text" name="id" required autofocus>
+                            pwd: <input type="password" name="pwd" required>
+                            readonly: <input type="text" name="readonly" readonly value="readonly 는 value 필수">
+                        </div>
+                    </form>
+                </article>
                 <article class="article-1">
                     <h1>Flexbox</h1>
                     <div class="flex-3 menubar">
