@@ -62,3 +62,7 @@ section article.article-2 div.grid-3.basis {
 section article.article-2 div.grid-3  > div {
     border: 1px solid black;
 }
+
+section .flex-card-item {
+    display: flex;
+}
