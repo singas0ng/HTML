@@ -54,6 +54,12 @@
                         console.log("function 형태 a14의 값 - 자료형 : function");
                         console.log("key명 = 변수명 a14가 function명");
                          console.log(1020*382);
+                        
+                        console.log("===!! a14의 this!!==");
+                        console.log(this);  // a9객체
+                        console.log(this.name);
+                        console.log("===!! a14의 this!!==");
+
                         return 23*222;
                         }
                 };
@@ -74,6 +80,12 @@
             console.log("변수명 = function명");
             console.log(1020*382);
             //함수 정의가 있으면 함수를 실행해야함
+            
+            console.log("===!! a10의 this!!==");
+            console.log(this);// window객체
+            //접근불가console.log(this.name);
+            console.log("===!! a10의 this!!==");
+
             return 23*222;
             
         };
