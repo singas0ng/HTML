@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 01</title>
+    <script>
+        // 디버깅 용도로 많이 쓰임
+        document.write("안녕1");
+        document.write("하세요1");
+        
+        // 가장 우선으로 반응함 - 배경화면 display 안된 상태에서 뿌림(화면 공백)
+        //화면 보이지는 상태에서 뿌려지게 하려면 ajax(비동기 방식) 써야함
+        //window.alert("경고문구");
+    </script>
+</head>
+<body>
+    <h1 id="id2">JavaScript 처음</h1>
+    <h1 class="c2">JavaScript 처음2</h1>
+    <h1 class="c2">JavaScript 처음3</h1>
+
+    <script>
+
+
+       
+
+        var a3 = document.getElementById("id2");
+        //id 중복해서 쓰면 위에서부터 id 찾다가 첫번째 id 찾으면 밑에 볼것도 없이 그냥 첫번째 id 출력함
+        console.log(a3);
+
+        var a4 = document.getElementsByClassName("c2");
+        //var(variable) - 변수로 선언을 할거야(자료형)
+        console.log(a4);
+
+        var a5 = document.getElementsByTagName("h1");
+        //선택자로 결과값이 나옴
+        console.log(a5);
+
+        var a6 = document.querySelector(".c2");
+        //querySelector() 통해 질문하겠다(찾아주지 않겠니) - 첫번째 있는 것만 뽑아줌
+        console.log(a6);
+
+        var a7 = document.querySelectorAll(".c2");
+        //querySelector() 통해 질문하겠다(찾아주지 않겠니) - 배열 형태로 전부 뽑아줌
+        console.log(a7);
+        console.log(a7[0]);
+        //처음꺼 뽑고싶으면 0 써야함(배열은 0이 첫번째...)
+
+
+    </script>
+    
+    
+    
+    <br><br><br>
+    
+    <!-- <h1>JavaScript 처음</h1>
+    <h1>JavaScript 처음2</h1>
+    <h1>JavaScript 처음3</h1> -->
+
+    <script>
+        //1. 출력 관련
+        // 디버깅 용도로 많이 쓰임
+        document.write("안녕2");
+        document.write("하세요2");
+
+        // 가장 우선으로 반응함 - 배경화면 display 안된 상태에서 뿌림
+        // window.alert("경고문구");
+
+        //text 뿐만 아니라 <a href="#">링크</a><span>가격</span> => h1의 자식태그로 들어감
+        //안에 이미 큰 따옴표 있어서 밖에 작은 따옴표 허용함
+        document.getElementsByTagName("h1")[1].innerHTML = '<a href="#">바꿈문자1</a>';
+
+        //text만 넣음(문자만 입력)
+        document.getElementsByTagName("h1")[2].innerText = "바꿈문자2";
+        //h1 들 중 두번째인 얘를 바꿔줘(배열은 index 0 부터 시작)
+        
+        //document.getElementById
+        //document.getElementsByClassName
+        
+        //input, select 시리즈의 name(checkbox/radio 는 같은 이름 여러개 있어서)
+    
+
+    </script>
+    
+    <script>
+        //2. 입력 관련
+    //    var a1 = window.prompt("진입할 곳 이름 작성해주세요.");
+    //    사용자에게 입력값을 받기 때문에 변수에 담아줌
+    //   document.getElementsByTagName("h1")[0].innerHTML = a1;
+        
+
+        //a1 값을 console 창에 보여줌  
+        //console 창 옆에 몇번째 라인인지 뜨는데 그거 누르면 source창 뜨는데 거기서 라인 확인하기!
+        //console.log(a1);
+
+//        var a2 = window.confirm("계속 진행하시겠습니까?");
+        // //확인, 취소 내용 넘어와서 변수 선언헤야함
+//        console.log(a2);  
+        // // 확인 누르면 console 창에 true 뜨고, 취소 누르면 console 창에 false 뜸
+
+    </script>
+
+</body>
+</html>
