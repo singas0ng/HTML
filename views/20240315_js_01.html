@@ -14,12 +14,31 @@
         //window.alert("경고문구");
     </script>
 </head>
+
 <body>
     <h1 id="id2">JavaScript 처음</h1>
     <h1 class="c2">JavaScript 처음2</h1>
     <h1 class="c2">JavaScript 처음3</h1>
 
     <script>
+        //object 집중적으로 다룰 것
+        var a15 = {k1:1, k2:"s"};
+        console.log(a15);
+        a15.k3 = "a15에 새로 key k3 생성하고  값 넣음";
+        console.log(a15);
+        a15.k2 = "a15에 기존 key k2의 값 바꿔서 넣음";
+        console.log(a15);
+
+        a16 = "a16은 앞에 window. 생략됐다고 생각하기 - window 객체의 기존 key a16이 없다면 생성, 있다면 값 바꿈";
+
+   
+
+        //window.alert("browswer 의 window 객체의 alert 함수(메소드) 호출함");
+        //alert("window객체들의 key들은 window객체명 생략하고 접근 가능함 ");
+        window.document.getElementById("id2");
+        //document는 화면상만을 뜻함
+        console.log(typeof(window));
+
         //자료형
         var a8 ; // true - boolean // 223.23 - number // "sdf" - string //  null - object // 선언만하고 값 없으면 undefined
         console.log(typeof(a8));
@@ -67,6 +86,7 @@
 
 
         function a12() {
+            //함수 모양으로 정의를 해서 미리 인지를 하고 debugging 했을 때 실행해서 호출 가능
             console.log("a12==================");
             console.log("function 정의함");
             console.log("자바와 동일한 위치에 함수명이 있습니다");
