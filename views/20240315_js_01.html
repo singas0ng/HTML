@@ -20,9 +20,66 @@
     <h1 class="c2">JavaScript 처음3</h1>
 
     <script>
+        //자료형
+        var a8 ; // true - boolean // 223.23 - number // "sdf" - string //  null - object // 선언만하고 값 없으면 undefined
+        console.log(typeof(a8));
+        a8 = false;
+        console.log(typeof(a8));
+        //대입한 값에 따라서 자료형이 계속 바뀜 - mutable 방식
+
+        //object 자료형
+        var a9 ={k1 : 123, name : "홍길동", gender : "f"
+                , score: {kor : 100, eng : 90, math : 70}
+                , a14 :  function() {
+                        console.log("a14==============");
+                        console.log("function 형태 a14의 값 - 자료형 : function");
+                        console.log("key명 = 변수명 a14가 function명");
+                         console.log(1020*382);
+                        return 23*222;
+                        }
+                };
+
+        console.log(typeof(a9));
+        console.log(a9);
+        console.log(a9.k1);
+        console.log(a9.score.math);
+        console.log(a9.a14);
+        //그냥 a14의 값이 뭔지 코드 자체를 뿌림
+        console.log(a9.a14());
+        //a14 함수 실행도 하고 결과물도 뿌려달라
+        
+        //function 자료형
+        var a10 = function(){
+            console.log("a10================");
+            console.log("function 형태 변수 선언");
+            console.log("변수명 = function명");
+            console.log(1020*382);
+            //함수 정의가 있으면 함수를 실행해야함
+            return 23*222;
+            
+        };
+        console.log(typeof(a10));
+        console.log(a10);
+        
+        //함수 실행
+        a10();
+        console.log(a10()); 
 
 
-       
+        function a12() {
+            console.log("a12==================");
+            console.log("function 정의함");
+            console.log("자바와 동일한 위치에 함수명이 있습니다");
+            console.log(1020*382);
+            return 23*222;
+
+        };
+
+        //함수 실행
+        var a11 = a12();
+        console.log(a12());
+
+
 
         var a3 = document.getElementById("id2");
         //id 중복해서 쓰면 위에서부터 id 찾다가 첫번째 id 찾으면 밑에 볼것도 없이 그냥 첫번째 id 출력함
