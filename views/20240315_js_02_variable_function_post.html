@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 01</title>
+    <script>
+
+        //함수 형태들은 head안에 script에 실행
+        function f1 () { 
+            //이 안은 f1()을 호출해야 실행
+            a4 = 4; 
+            var a3 = 3; //지역변수는 그때 그때 함수 내부에서 선언 하면 됨
+
+            let f2 = function () { 
+            a4 = 4; 
+            var a3 = 3; 
+            console.log("이곳 - 3 : a1 : " + a1);
+            console.log("이곳 - 3 : a2 : " + a2);
+            console.log("이곳 - 3 : a3 : " + a3);
+            console.log("이곳 - 3 : a4 : " + a4);
+
+            }// 인지 조차 못함(정의만 한거라 실행 안됨)
+            
+            console.log("이곳 - 3 : a1 : " + a1);
+            console.log("이곳 - 3 : a2 : " + a2);
+            console.log("이곳 - 3 : a3 : " + a3);
+            console.log("이곳 - 3 : a4 : " + a4);
+
+        }
+        
+        //전역변수로 쓰고 싶은 얘들을 선언
+        let a1 = 1; //let으로 선언하면 같은 이름으로 중복 선언 불가함(딱 한번만 선언됨)
+        let a2 = 3;
+        let a4;
+
+    </script>
+</head>
+
+<body>
+    <h1 id="id2">JavaScript 처음</h1>
+    <h1 class="c2">JavaScript 처음2</h1>
+    <h1 class="c2">JavaScript 처음3</h1>
+    
+    <script>
+        console.log("이곳 - 6 : a4 : " + a4); //호출전이라 a4는 undefined
+
+        var a10;
+        var a11;
+        
+        var sum;
+        var sum;
+        //var 은 중복 선언 가능 
+
+        
+        // for(i=0; i<10; i++) {
+        //     console.log(i); // i는 전역변수가 됨
+        // }
+
+        for(var i=0; i<10; i++) {
+            console.log(i); // i는 지역변수가 됨 => for문 쓸때는 대부분 var 을 씀
+        }
+
+
+    
+        f1();
+        console.log("이곳 - 4 : a1 : " + a1);
+        console.log("이곳 - 4 : a2 : " + a2);
+        //지역변수라 오류 console.log("이곳 - 4 : a3 : " + a3);
+        console.log("이곳 - 4 : a4 : " + a4);
+
+        { 
+            console.log("이곳 - 2 : a1 : " + a1);
+            console.log("이곳 - 2 : a2 : " + a2);
+            //오류 console.log("이곳 - 2 : a3 : " + a3);
+            console.log("이곳 - 2 : a4 : " + a4);
+        } 
+
+
+    </script>
+
+    <script>
+            f1(); // 이곳에 함수 호출하고 실행
+            console.log("이곳 - 4 : a1 : " + a1);
+            console.log("이곳 - 4 : a2 : " + a2);
+            //오류 console.log("이곳 - 4 : a3 : " + a3);
+            console.log("이곳 - 4 : a4 : " + a4);
+    </script>
+
+</body>
+</html>

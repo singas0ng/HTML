@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript 01</title>
-    <script>
-        // 디버깅 용도로 많이 쓰임
-        document.write("안녕1");
-        document.write("하세요1");
-        
-        // 가장 우선으로 반응함 - 배경화면 display 안된 상태에서 뿌림(화면 공백)
-        //화면 보이지는 상태에서 뿌려지게 하려면 ajax(비동기 방식) 써야함
-        //window.alert("경고문구");
-    </script>
+
 </head>
 
 <body>
@@ -23,14 +15,14 @@
     <script>
         // script 안에 있으면 지역변수 의미가 아님 - 함수 안에 있어야 지역변수 의미를 가짐
 
-        var a1 = 1;
-        //이 script 안에서는 다 쓸 수 있음
+        var a1 = 1; 
+        //이 script 안에서는 다 쓸 수 있음 - var 가 붙었어도 위치상 전역변수임
         console.log("이곳 - 1 : a1 : " + a1);
-        console.log("이곳 - 1 : a2 : " + a2);
-        //오류 console.log("이곳 - 1 : a3 : " + a3);
+        console.log("이곳 - 1 : a2 : " + a2); // 밑에 보면 전역변수라 선언은 되었지만 값은 뿌려지지 않음 - undefined
+        //오류 console.log("이곳 - 1 : a3 : " + a3); - 여기서 오류가 떠서 뒤에 {} 안에 있는 얘들은 실행 안됨
         //오류 console.log("이곳 - 1 : a4 : " + a4);
         
-        {
+        { //함수 안이 아니기 때문에 전역변수
             var a2 = 2;
             // { } 사이에서만 사용 가능
             console.log("이곳 - 2 : a1 : " + a1);
@@ -39,9 +31,11 @@
             //오류 console.log("이곳 - 2 : a4 : " + a4);
         } //인지는 함
 
-        function f1 () {
-            var a3 = 4;
-            // { } 사이에서만 사용 가능
+        function f1 () { //여기는 실행은 아니고 보여주기만함
+            //줄 통과하기 전부터 완성형이지만 var f2= function {} 이거는 지나가야 f2가 실행됨
+            a4 = 4; //전역변수(f1()을 호출하는 순간 전역에서 다 사용 가능)
+            var a3 = 3; // 여기서만 쓸 수 있음
+            // { } 사이에서만 사용 가능 - 지역변수(함수 안에 선언됨)
             console.log("이곳 - 3 : a1 : " + a1);
             console.log("이곳 - 3 : a2 : " + a2);
             console.log("이곳 - 3 : a3 : " + a3);
@@ -49,11 +43,13 @@
 
         }// 인지 조차 못함(정의만 한거라 실행 안됨)
 
-                //오류console.log("이곳 - 5 : a4 : " + a4);
+        //오류console.log("이곳 - 5 : a4 : " + a4);
+        //호출하고 함수 실행해야 a4 뿌려짐
     </script>
-    <h1>변수 영역</h1>
+
+    
     <script>
-            f1();
+            f1(); // 이곳에 함수 호출하고 실행
             console.log("이곳 - 4 : a1 : " + a1);
             console.log("이곳 - 4 : a2 : " + a2);
             //오류 console.log("이곳 - 4 : a3 : " + a3);
