@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 01</title>
+    <script>
+        // 디버깅 용도로 많이 쓰임
+        document.write("안녕1");
+        document.write("하세요1");
+        
+        // 가장 우선으로 반응함 - 배경화면 display 안된 상태에서 뿌림(화면 공백)
+        //화면 보이지는 상태에서 뿌려지게 하려면 ajax(비동기 방식) 써야함
+        //window.alert("경고문구");
+    </script>
+</head>
+
+<body>
+    <h1 id="id2">JavaScript 처음</h1>
+    <h1 class="c2">JavaScript 처음2</h1>
+    <h1 class="c2">JavaScript 처음3</h1>
+    
+    <script>
+        // script 안에 있으면 지역변수 의미가 아님 - 함수 안에 있어야 지역변수 의미를 가짐
+
+        var a1 = 1;
+        //이 script 안에서는 다 쓸 수 있음
+        console.log("이곳 - 1 : a1 : " + a1);
+        console.log("이곳 - 1 : a2 : " + a2);
+        //오류 console.log("이곳 - 1 : a3 : " + a3);
+        //오류 console.log("이곳 - 1 : a4 : " + a4);
+        
+        {
+            var a2 = 2;
+            // { } 사이에서만 사용 가능
+            console.log("이곳 - 2 : a1 : " + a1);
+            console.log("이곳 - 2 : a2 : " + a2);
+            //오류 console.log("이곳 - 2 : a3 : " + a3);
+            //오류 console.log("이곳 - 2 : a4 : " + a4);
+        } //인지는 함
+
+        function f1 () {
+            var a3 = 4;
+            // { } 사이에서만 사용 가능
+            console.log("이곳 - 3 : a1 : " + a1);
+            console.log("이곳 - 3 : a2 : " + a2);
+            console.log("이곳 - 3 : a3 : " + a3);
+            console.log("이곳 - 3 : a4 : " + a4);
+
+        }// 인지 조차 못함(정의만 한거라 실행 안됨)
+
+                //오류console.log("이곳 - 5 : a4 : " + a4);
+    </script>
+    <h1>변수 영역</h1>
+    <script>
+            f1();
+            console.log("이곳 - 4 : a1 : " + a1);
+            console.log("이곳 - 4 : a2 : " + a2);
+            //오류 console.log("이곳 - 4 : a3 : " + a3);
+            console.log("이곳 - 4 : a4 : " + a4);
+    </script>
+
+</body>
+</html>
