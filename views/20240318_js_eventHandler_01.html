@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <button type="button" id="btn1">버튼1</button>
+    <button type="button" id="btn2">버튼2</button>
+    <button type="button" id="btn3" onclick="cbF3(); console.log('이것도')">버튼 3</button> 
+    <!-- onclick은 html 의 속성명 중 하나 - js 없어도 동작함 -->
+    <!-- js 에서 callback 함수 모양에서 실행은 안됨 -->
+
+
+    <script>
+        
+        var cbF1 = function() {
+            console.log("고전방식: 이벤트 발생하여 callback 함수 호출됨.");
+
+        }
+
+        var cbF2 = function() {
+            console.log("표준방식: 이벤트 발생하여 callback 함수 호출될 수 있도록 () 붙여주고 실행");
+            
+        }
+        
+        var cbF3 = function() {
+            console.log("인라인: 이벤트 발생하면 따옴표 안의 내용을 그냥 그대로 실행");
+            //html 에서는 callback 못하니까 실행 코드를 그대로 써줘야함
+            
+        }
+        
+       
+
+
+        var btn1Elem = document.getElementById("btn1");
+        console.log(btn1Elem);
+        //console.log(typeof(btn1Elem)); btn1Elem => object형이라 라 key 속성명 가지고 있음
+
+        btn1Elem.onclick = cbF1;
+        var btn2Elem = document.getElementById("btn2");
+        btn2Elem.addEventListener("click", cbF2);
+
+        //callback 함수에 등록해서 (); 붙여서 실행해달라고 하면 js에서 알아서 실행해줌
+
+        //고전 이벤트 모델
+        // btn1Elem.onclick = function() { //btnElem 에 click을 해야 나타남
+            // -> 필드명에 대입
+        //     console.log("고전방식: 이벤트 발생하여 callback함수가 호출됨");
+        // };
+
+
+
+
+        
+        //표준 이벤트 모델
+        btn1Elem.addEventListener("click", function(){}); //매개인자 2개를 던지는데 2번째는 함수를 넣음
+        console.log("표준방식: 이벤트를 발생하여 callback 함수 호출됨.")
+        
+
+
+        function f1 (a1, a2, a3){
+            //addEventhandler(event 명, callback function){}
+            if(a1 == "click") {
+                //click이 되는 순간까지 기다렸다가 눌려야 a2(); 호출
+                a2();
+            }
+
+        }
+
+
+        
+    </script>
+
+
+</body>
+</html>
