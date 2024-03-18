@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    function f1 (a1, a2, a3){  //이렇게만 하면 undefined => a1에 값 지정 안함
+        //() 안에 매개변수 선언 시 var로 안함 - var 은 붙이면 지역변수라서..
+        
+
+
+
+        
+        console.log("f1 함수 실행");
+        console.log(arguments); //prinf 같은 역할 => 준것만큼 다 뿌려줄게
+        if(typeof a1 == "undefined"){
+            console.log("a1 기본설정해줄께");
+        } else {
+            console.log(a1);
+        }
+        if(typeof a2 == "undefined"){
+            console.log("a2 기본설정해줄께");
+        } else {
+            console.log(a2);
+        }
+        if(typeof a3 == "undefined"){
+            console.log("a3 기본설정해줄께");
+        } else {
+            console.log(a3);
+            if(typeof a3 == "function") {
+                a3(); //a3 호출 가능 - 밑에 a3 자리에 function() 써서(익명함수)
+
+            }
+
+        }
+
+    }
+
+
+    //함수 실행
+    f1();
+    f1(10);
+    f1("abc");
+    f1(10, 20); 
+    f1(10, 20, function() {
+            console.log("익명함수 - 3번째 매개인자 값으로 전달")
+    });
+    //function() 익명함수를 따로 빼서 정의하고 그거에 대한 변수이름을 써도됨 - 가독성을 위해
+    
+    //f1(10, 20, "abc", 30); => 매개인자 개수보다 더 많이 넣지 마세요 ^^
+    //매개인자 4개 전달하면 3개는 들어가고 마지막은 버려짐
+    // 오류 코드 f1(10, 20, "abc", 30);
+
+
+    var obj = { "k 1" : "one", k2 : "two", 
+              k3 : 20};
+
+
+
+    obj["ki"];         
+    console.log("k 1");
+    console.log(obj["k1"]);
+    console.log("k3");
+
+    for(var key in obj) {
+        console.log(key);
+        console.log("k1");
+    }
+
+    delete(obj.k2);
+    console.log(obj);
+
+
+</script>
+
+</body>
+</html>
