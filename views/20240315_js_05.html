@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>자료형 - detail</h1>
+
+<script>
+
+//문자열 관련
+    var a1 = "문자\"열1";
+    console.log(a1);
+    
+    a1 += '문자"열1';
+    console.log(a1);
+    
+    a1 += "문자'열1";
+    console.log(a1);
+    
+    a1 += '문자\'열1';
+    //a1.lastIndexOf('자'); //이렇게하면 number 형태로 return
+    console.log(a1);
+    var result = a1.lastIndexOf('자');
+    console.log(result);
+
+</script>
+
+
+<script>
+
+//숫자 관련
+    var a1 = 10/0; //0
+    console.log(a1); // Infinty 라는 값 나옴(허수)
+
+    var a1 = 0/0; //NaN
+    console.a1(a1) ; console.log(typeof a1);
+
+    var a1 = Math.sqrt(-9);  // NaN 허수 => 루트 안에 허수
+    // console.log(a1);console.log(typeof a1);
+
+    var a1 = 100 * "hello";  // NaN - number 표현 안됨.
+    console.log(a1);console.log(typeof a1);
+    var a1 = 100 - "hello";  // NaN - number 표현 안됨.
+    console.log(a1);console.log(typeof a1);
+    var a1 = 100 / "hello";  // NaN - number 표현 안됨.
+    console.log(a1);console.log(typeof a1);
+    var a1 = 100 + "hello"; // + 연결자로 있어서 string 형태로 나옴
+    console.log(a1);console.log(typeof a1);
+
+    var a2 = a1 + a1;// Infinity + Infinity => Infinity
+    console.log(a2); 
+    var a2 = a1 - a1;// Infinity - Infinity => NaN
+    console.log(a2); 
+    var a2 = a1 * a1;// Infinity * Infinity => Infinity
+    console.log(a2); 
+    var a2 = a1 / a1;// Infinity / Infinity => NaN
+    console.log(a2); 
+
+
+
+
+    var a2 = a1 + a1; //Infinity + Infinity
+    var a2 = a1 - a1; //Infinity + Infinity
+    console.log(a2); 
+
+</script>
+
+<h1 id="question">입력한 값은 100보다 큰가? 작은가?</h1>
+<h1 id="result">출력</h1>
+
+<script>
+
+var c = window.prompt("숫자를 입력하세요."); //prompt 통해 입력받는 값은 문자열
+console.log(typeof(c)); //string
+
+//문자열이 연산자와 함께 사용시 문자열을 숫자로 형변환 (더하기 제외 빼기, 나누기, 곱하기) 
+//문자열이 숫자가 아닌 경우 NaN 리턴
+
+
+c = Number.parseInt(c); //string 을 number로 강제형변환
+console.log(c * 100); //자동형변환이 되고 숫자로 산술 연산함
+console.log( c + 100); // + 는 연결자로 변함(형변환 안됨)
+c += 1;
+
+console.log(c);
+console.log(typeof c);
+console.log( c++ ); //number 형으로 자동형변환
+console.log(c);
+
+</script>
+
+<script>
+
+var a1 = true;
+var a2 = 1;
+console.log((a1==a2)? "==같다" : "==다르다");
+
+//var a3; => 이거 if() 안에 넣으면 undefined
+var a3 = []; //배열 모양 생기면 push 자동으로 생김 => 값은 넣지 않았지만 자료형 못박는 거라 자동완성 뜸
+console.log(typeof a3);//object (배열도 index를 가지고 있는 object의 일종이라서)
+//a3[0]= "a";
+//a3[1]= "b";
+//a3.push("a"); //맨 마지막에 push
+//a3.push("b"); 
+console.log(a3);
+
+
+var a3 = {}; 
+console.log(typeof a3); //object 모양
+a3.k1  = v1; //object key : value넣는 방법 1
+a3["k2"] = v2; // object key : value넣는 방법 2
+console.log(a3);
+
+for( var key in a3){ //a3를 넣어서 key값에 들어감
+    console.(a3[key]); // 방법 2만 가능.
+
+}
+
+
+
+if(a3) {
+    console.log("string, 음수, 양수, 실수 - true")
+} else {
+    console.log("0, undefined, null, NaN - '' 빈문자 - false");
+    //빈 문자를 화면을 구성하는 의미에서 false로 봄
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
