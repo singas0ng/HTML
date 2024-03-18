@@ -38,6 +38,7 @@
 
     var a1 = 0/0; //NaN
     console.a1(a1) ; console.log(typeof a1);
+    console.log(isFinite(a1)); // true
 
     var a1 = Math.sqrt(-9);  // NaN 허수 => 루트 안에 허수
     // console.log(a1);console.log(typeof a1);
@@ -51,12 +52,20 @@
     var a1 = 100 + "hello"; // + 연결자로 있어서 string 형태로 나옴
     console.log(a1);console.log(typeof a1);
 
+
     var a2 = a1 + a1;// Infinity + Infinity => Infinity
     console.log(a2); 
+    console.log(isFinite(a2)); //값이 Infinity 상태라 false
+    console.log(isNaN(a2)); //false
+    
     var a2 = a1 - a1;// Infinity - Infinity => NaN
     console.log(a2); 
+    console.log(isFinite(a2)); //Nan도 false 로 뜸
+    console.log(isNaN(a2)); //true
+    
     var a2 = a1 * a1;// Infinity * Infinity => Infinity
     console.log(a2); 
+    
     var a2 = a1 / a1;// Infinity / Infinity => NaN
     console.log(a2); 
 
@@ -116,7 +125,7 @@ a3["k2"] = v2; // object key : value넣는 방법 2
 console.log(a3);
 
 for( var key in a3){ //a3를 넣어서 key값에 들어감
-    console.(a3[key]); // 방법 2만 가능.
+    console. log(a3[key]); // 방법 2만 가능.
 
 }
 
