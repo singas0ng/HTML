@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>class constructor 전단계</h1>
+    <script>
+        console.log("class constructor 전단계");
+        function funcConstructer(age, name, score) {
+            var obj = {
+                age : age,
+                name : name, //"name" 이렇게 써도됨
+                score : score,
+            };
+            return obj;
+        }
+
+
+
+        let ej = funcConstructer(12, 'ej', 22);
+        let jw = funcConstructer(23, 'jw', 99);
+        console.log(ej.score);
+        ej.score = 98;
+
+
+        function student(age, name, score) {
+            this.age = age; //this 는 window(내 위에 뭐가 없어서)
+            this.name = name;
+            this.score = score;
+        }
+
+        let cw = new student(11, 'cw', 65);    
+        console.log(cw);  
+
+        
+    
+    
+    </script>
+
+
+</body>
+</html>
