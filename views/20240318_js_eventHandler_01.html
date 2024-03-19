@@ -13,6 +13,20 @@
     <button type="button" id="btn3" onclick="cbF3(); console.log('이것도')">버튼 3</button> 
     <!-- onclick은 html 의 속성명 중 하나 - js 없어도 동작함 -->
     <!-- js 에서 callback 함수 모양에서 실행은 안됨 -->
+    
+    
+    
+    <form method="get" action="#" id="form-test">
+        <!-- 보통 form 태그에 onsubmit 걸어줌 -->
+        <input type="text" name="n1">
+        <button type="submit" onclick="return cbF3();">전달</button>
+        <!-- id와 인라인이벤트 쓰면 혼선을 주기에 쓰지말기 -->
+        <!-- onclick이 inline 이라 먼저 발생함 -->
+
+    </form>
+
+
+
 
 
     <script>
@@ -30,10 +44,13 @@
         var cbF3 = function() {
             console.log("인라인: 이벤트 발생하면 따옴표 안의 내용을 그냥 그대로 실행");
             //html 에서는 callback 못하니까 실행 코드를 그대로 써줘야함
-            
+            return true;
+            //아이디 입력 제대로 했는지, 중복 확인했는지.... 제대로 하면 true, 아니면 false
         }
         
        
+        var formEle = document.getElementById("form-test");
+        formEle.onsubmit = cbF1;
 
 
         var btn1Elem = document.getElementById("btn1");
@@ -41,10 +58,16 @@
         //console.log(typeof(btn1Elem)); btn1Elem => object형이라 라 key 속성명 가지고 있음
 
         btn1Elem.onclick = cbF1;
+
         var btn2Elem = document.getElementById("btn2");
         btn2Elem.addEventListener("click", cbF2);
-
         //callback 함수에 등록해서 (); 붙여서 실행해달라고 하면 js에서 알아서 실행해줌
+        
+        var btn3Elem = document.getElementById("btn3");
+        //btn3Elem.onclick = cbF1;
+
+        //btn3Elem.addEventListener("click", cbF2);
+
 
         //고전 이벤트 모델
         // btn1Elem.onclick = function() { //btnElem 에 click을 해야 나타남
