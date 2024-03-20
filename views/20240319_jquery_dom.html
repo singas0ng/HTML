@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <!-- 여기에 코딩하면 안됨/jquery는 무조건 head 안에 적어야함 -->
+
+</head>
+<body>
+    <button type="button" id="btn-add">추가</button>
+    <table border="1">
+        <thead>
+            <tr id="tbl-col">
+                <td style="color: red;">컬럼명</td>
+                <td>컬럼명</td>
+            </tr>
+
+        </thead>
+        
+        <tbody>
+            <tr><td>1</td><td>1</td></tr>
+            <tr><td>2</td><td>2</td></tr>
+            <tr><td>3</td><td>3</td></tr>
+
+        </tbody>
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+    <script>
+        //console.log($("tr").eq(0).get(0));
+        // 첫번째꺼 꺼내줘
+        //get - 형변환 해서 dom 형태로 바꿔줌 - 그냥 get() 으로 꺼내면 됨
+
+        console.log($("tr").first());
+        console.log($("tr").last());
+        
+        console.log(document.getElementsByTagName("tr"));
+        // 변수에 담음
+        console.log(document.getElementsByTagName("tr")[document.getElementsByTagName("tr").length-1]);
+
+
+        </script>
+
+        <script>
+
+            var arr = [10, 20, 30, "bb"];
+            var obj = {k1 : 10, k2 : 20, k3 : "aaa"};
+            function cbEachF1(a1, a2){
+                console.log("each함수 실행");
+                console.log(a1); //index
+                console.log(a2); //item value
+            }
+            
+            
+            $.each(arr, cbEachF1);
+            $.each(obj, cbEachF1);
+            $("td").each(cbEachF1);
+            
+            // for(var a1 in arr) {
+            //     console.log("for in ");
+            //     console.log(a1); //index
+            //     console.log(arr[a1]); //item value
+            // };
+            
+
+        </script>
+
+
+
+        <script>
+        let count = 1;
+
+        var cbf4 = function() {
+        console.log("cbf4 동작 확인용 메시지");
+        //방법 1
+        var htmlValue = '';
+        htmlValue += '<tr>';
+        htmlValue += '     <td>'+count+'</td>';
+        htmlValue += '     <td>컬럼명'+count+'</td>';
+        htmlValue += '</tr>';
+
+        var temp = $("tbody").eq(0).html();
+        // //메소드 없으면 읽기( () 안에 없을 떄 )
+        $("tbody").eq(0).html(temp+htmlValue);
+        $("td:nth-of-type(0)").css("color", "blue");
+
+        // var temp = document.getElementsByTagName("tbody")[0].innerHTML;
+        // document.getElementsByTagName("tbody")[0].innerHTML = temp + htmlValue;
+
+
+
+
+        // //방법 - 2 DOM 
+        // 자식 2명
+        var nodeTr = '<tr></tr>';
+        var nodeTd1 = '<td>'+count+'</td>';
+        var nodeTd2 = '        <td>컬럼명'+count+'</td>';
+        
+        // $("tbody").append(nodeTr);
+        // $("tbody").append(nodeTd1);
+        // $("tbody").append(nodeTd2);
+
+        // document.getElementsByTagName("tbody")[0].appendChild(nodeTr);
+        
+        // nodeTd1.appendChild(nodeText1);
+        // nodeTd2.appendChild(nodeText2);
+
+        // nodeTd1.setAttribute("class", "abc");
+        // nodeTd1.setAttribute("css", "color:red;");
+
+        //count++;
+    }
+
+//document.getElementById("btn-add").addEventListener("click", cbf4);
+
+
+</script>
+
+
+    <!-- js 파일은 하단에 위치함 -->
+</body>
+</html>
