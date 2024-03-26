@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>화면설계-순서에 맞춰서</title>
-    <!-- [1] 해상도 - 최적해상도 1050px 결정(최대/최소 지원범위 - 테스트 해봐야함) -->
-    <!-- [2] content 영역 960px 80vw 90%, 중앙배치할거냐 왼쪽 배치할거냐 -->
-    <!-- [2] reset.css 폴더 경로 확정(안에 있는 내용도 검토) -->
-    <link href="/css/reset.css" rel="stylesheet">
- 
- <!-- bootstrap 우선순위 낮추기-->
- <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
-
-    <!-- [4] project명 또는 core.css / projectname.css 폴더경로 정하기 - bootstrap, template 등으로 대체 -->
-    <!-- [4] 기본색상 10~15개 정도 class 미리 만들어두기-->
-    <!-- [4] 폰트 family와 크기 5~7개 정도 calss 미리 만들어두기-->
-    <!-- [4] button 모양도 class로 3개 미리 만들어두기-->
-    <!-- [4] a 모양 미리 만들어두기 - link/visited 그런것들... -->
-    <link href="/css/webpage_core.css" rel="stylesheet">
-    <!-- 공통적으로 쓰이는 얘들 여기에 써주기 -->
-
- <!-- bootstrap 우선순위 낮추기 -->
- <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
-
-    <!-- [5] body Layout 영역 - 화면설계서 -->
-    <!-- <link href="/css/webpage_layout.css" rel="stylesheet"> -->
-
-
-    <!-- head 영역 style -->
-    <link href="/css/webpage_header.css" rel="stylesheet">
-
-
-    <!-- section 영역 style -->
-    <link href="/css/webpage_section.css" rel="stylesheet">
-    
-    
-    <!-- aside 영역 style -->
-    <link href="/css/webpage_aside.css" rel="stylesheet">
-    
-    
-    <!-- footer 영역 style -->
-    <link href="/css/webpage_footer.css" rel="stylesheet">
-
-    <!-- bootstrap 우선순위 높이고 싶으면 이 위치에 놓고 아니면 rset.css 밑에 넣기 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-
-    
-    <style>
- @import url("/css/webpage_layout.css") screen and (min-width:960px);
- @import url("/css/webpage_layout_response.css") screen and (min-width:800px) and (max-width:959px);
- @import url("/css/webpage_layout_min.css") screen and (max-width:800px);
-
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>화면설계-순서에 맞춰서</title>
+        <!-- [1] 해상도 - 최적해상도 1050px 결정(최대/최소 지원범위 - 테스트 해봐야함) -->
+        <!-- [2] content 영역 960px 80vw 90%, 중앙배치할거냐 왼쪽 배치할거냐 -->
+        <!-- [2] reset.css 폴더 경로 확정(안에 있는 내용도 검토) -->
+        <link href="/css/reset.css" rel="stylesheet">
+        
+        <!-- bootstrap 우선순위 낮추기-->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        
+        <!-- [4] project명 또는 core.css / projectname.css 폴더경로 정하기 - bootstrap, template 등으로 대체 -->
+        <!-- [4] 기본색상 10~15개 정도 class 미리 만들어두기-->
+        <!-- [4] 폰트 family와 크기 5~7개 정도 calss 미리 만들어두기-->
+        <!-- [4] button 모양도 class로 3개 미리 만들어두기-->
+        <!-- [4] a 모양 미리 만들어두기 - link/visited 그런것들... -->
+        <link href="/css/webpage_core.css" rel="stylesheet">
+        <!-- 공통적으로 쓰이는 얘들 여기에 써주기 -->
+        
+        <!-- bootstrap 우선순위 낮추기 -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+        
+        <!-- [5] body Layout 영역 - 화면설계서 -->
+        <!-- <link href="/css/webpage_layout.css" rel="stylesheet"> -->
+        
+        
+        <!-- head 영역 style -->
+        <link href="/css/webpage_header.css" rel="stylesheet">
+        
+        
+        <!-- section 영역 style -->
+        <link href="/css/webpage_section.css" rel="stylesheet">
+        
+        
+        <!-- aside 영역 style -->
+        <link href="/css/webpage_aside.css" rel="stylesheet">
+        
+        
+        <!-- footer 영역 style -->
+        <link href="/css/webpage_footer.css" rel="stylesheet">
+        
+        <!-- bootstrap 우선순위 높이고 싶으면 이 위치에 놓고 아니면 rset.css 밑에 넣기 -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+        
+        
+        <style>
+            @import url("/css/webpage_layout.css") screen and (min-width:960px);
+            @import url("/css/webpage_layout_response.css") screen and (min-width:800px) and (max-width:959px);
+            @import url("/css/webpage_layout_min.css") screen and (max-width:800px);
+        
         @media screen and (min-width:1300px) {
             body {
                 font-size: 1.1em;
             }
-
+            
             h1 {
                 font-weight: 900;
                 font-size: 1.3em;
                 line-height: 1.3em;
             }
-
+            
             h3 {
                 font-weight: 900;
                 font-size: 1.1em;
                 line-height: 1.1em;
             }
-
+            
             header .tnb a {
                 padding: 10px 15px;
             }
-
+            
             header .bnb a {
                 padding: 15px 20px;
             }
@@ -81,23 +81,23 @@
             body {
                 font-size: .8em;
             }
-
+            
             h1 {
                 font-weight: 900;
                 font-size: 1.1em;
                 line-height: 1.3em;
             }
-
+            
             h3 {
                 font-weight: 900;
                 font-size: .9em;
                 line-height: 1.1em;
             }
-
+            
             header .tnb a {
                 padding: 5px 5px;
             }
-
+            
             header .bnb a {
                 padding: 5px 10px;
             }
@@ -106,20 +106,20 @@
                 width: 600px; margin: 0 auto;
             }
         }
-
+        
         /* input:disabled {
             font-size: larger;
         } */
-
+        
         .mission_a {
             position: relative;
         }
-
+        
         .mission_a h1 a:hover::after {
             content: 'HTML5! CSS3! 실습입니다';
             font: .7em Helveta sans-serif;
             color : blue;
-
+            
             position: absolute;
             /*  고정/특정 위치 놓고 싶을 때*/
             /* absolute 줬으니 상위 얘한테 relative 주기 */
@@ -132,7 +132,7 @@
             text-align: center;
             /* 안에 들어있는 content 를 가운데 정렬 */
         }
-
+        
         article .c-ellipsis {
             border: 1px solid black;
             width: 100px;
@@ -142,11 +142,11 @@
             white-space: nowrap;
             overflow: hidden;
         }
-
+        
         article .c-clip {
             border: 1px solid black;
             width: 100px;
-
+            
             /* 세트로 기억하기 */
             text-overflow: clip;
             white-space: nowrap;
@@ -185,8 +185,9 @@
                 </div>
             </header>
         </div>
+        
         <div class="wrap-main">
-            <section>
+            <section class="section">
                 <article>
                     
                     <div id="carouselExampleIndicators" class="carousel slide">
@@ -220,6 +221,34 @@
                         </button>
                       </div>
                 </article>
+
+                <!-- modal 예시 -->
+                <article>
+                    <div>
+                        <h1>모달</h1>
+                        <button type="button" class="btn modal">
+                            <img alt="aaa" src="">
+                            <span>모달</span>
+                            <span>띄우기</span>
+                        </button>
+                        <div class="wrap-modal modal project write">
+                            <!-- 뒤에 흐리게 하는 것 -> 윈도우 창을 다 흐리게 하는거기 때문에 크기 100% -->
+                            <div class="modal-content modal project write">
+                                <!-- modal은 button 으로 무조건 해야함 -->
+                                <!-- 진짜 띄우는 modal content 는 이거 -->
+                                <!-- 모달창 많으면 각각에 해당하는 곳에 넣어주기. 개수 거의 없으면 layout.css 에 넣기 -->
+                                <div class="btn modal-close">x</div>
+                                <div>
+                                    Lorem!
+                                </div>
+                                <div>
+                                    Lorem!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
                 <article>
                     <div class="c-ellipsis">
                         asfaslfjsjfkj;skjfkskakflalsdlkf
@@ -231,6 +260,7 @@
                         <h1><a href="#">웹표준 2.0</a> 테스트</h1>
                     </div>
                 </article>
+
                 <article>
                     <form method="get" action="#">
                         <div>
@@ -447,6 +477,54 @@
                     </div>
                 </article>
             </section>
+
+            <script>
+                $(loadHandler);
+                function loadHandler(){
+                    $(".btn.modal").on("click", btnModalClickHandler);
+                    $(".btn.modal-close").on("click", btnMOdalCloseClickHandler);
+                    $(".wrap-modal").on("click", btnMOdalCloseClickHandler);
+                }
+
+                function btnModalClickHandler(){
+                    //console.log(e);
+                    console.log(event);
+                    // window 객체 안의 event 가 있는데 그것을 의미함
+                    console.log(event.target);
+                    
+                    console.log(this);
+                    $(".section .wrap-modal").css("display", "block");
+                }
+
+                function btnMOdalCloseClickHandler( e ) {
+                    //() 안은 callback 함수로 () 를 보내줌
+                    
+                    console.log(e.target); 
+                    console.log(event.target); 
+                    // click 했을 때 나에게 제일 가까운 태그 뜸
+                    console.log(this); //항상 wrap-modal이 뜸
+                    console.log(document.getElementsbyClassName("wrap=modal")[0]);
+                    console.log($(".section .wrap-modal").get(0));
+                    //DOM
+                    if(
+                        (event.target == $(".section .wrap=modal").get(0))
+                        // 바깥쪽 닫히게 하는 것
+
+                    || (event.target == $(".btn.modal-close").get(0))
+                                    
+                    ){
+                        //wrap-modal 이 클릭됐다는 것을 의미
+                        $(".section .wrap-modal").css("display", "none");
+
+                    }
+                }
+
+            </script>
+
+
+
+
+
             <aside>
                 <input type="radio" name="n1" id="first" checked="checked">
                 <input type="radio" name="n1" id="second" >
